@@ -13,28 +13,34 @@ load_model = pickle.load(
 
 # ================= ENCODING MAPS =================
 region_map = {
-    "North": 0,
-    "South": 1,
-    "East": 2,
+    "East": 0,
+    "North": 1,
+    "South": 2,
     "West": 3
 }
 
 soil_map = {
-    "Sandy": 0,
-    "Loamy": 1,
-    "Clay": 2
+    "Chalky": 0,
+    "Clay": 1,
+    "Loam": 2,
+    "Peaty": 3,
+    "Sandy": 4,
+    "Silt": 5
 }
 
 crop_map = {
-    "Maize": 0,
-    "Rice": 1,
-    "Wheat": 2
+    "Barley": 0,
+    "Cotton": 1,
+    "Maize": 2,
+    "Rice": 3,
+    "Soybean": 4,
+    "Wheate": 5
 }
 
 weather_map = {
-    "Sunny": 0,
+    "Cloudy": 0,
     "Rainy": 1,
-    "Cloudy": 2
+    "Sunny": 2
 }
 
 # ================= SHOW ENCODING TABLE =================
@@ -70,10 +76,10 @@ def main():
 
     st.subheader("🔢 Enter Input Data")
 
-    Region = st.selectbox("Region", list(region_map.keys()))
-    Soil_Type = st.selectbox("Soil Type", list(soil_map.keys()))
-    Crop = st.selectbox("Crop", list(crop_map.keys()))
-    Weather_Condition = st.selectbox("Weather Condition", list(weather_map.keys()))
+    Region = st.number_input("Region", min_value=0, max_value=3)
+    Soil_Type = st.number_input("Soil Type", min_value=0, max_value=5)
+    Crop = st.number_input("Crop", min_value=0, max_value=5)
+    Weather_Condition = st.number_input("Weather Condition", min_value=0, max_value=2)
 
     Rainfall_mm = st.number_input("Rainfall (mm)", min_value=0.0)
     Temperature_Celsius = st.number_input("Temperature (°C)")
