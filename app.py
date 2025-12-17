@@ -8,7 +8,7 @@ import pandas as pd
 # ================= LOAD MODEL =================
 
 load_model = pickle.load(
-    open(r"C:\Users\MIND-HACKER\Documents\Jupyter\DEPLOYMENT\Crop_Yield_Model.sav", "rb")
+    open("Crop_Yield_Model.sav","rb")
 )
 
 # ================= ENCODING MAPS =================
