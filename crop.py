@@ -10,15 +10,10 @@ import streamlit as st
 import pickle
 import numpy as np
 import pandas as pd
-import os
 
-MODEL_PATH = os.path.join("model", "Crop_Yield_Model.sav")
 
-with open(MODEL_PATH, "rb") as file:
-    load_model = pickle.load(file)
+load_model = pickle.load(open('Crop_Yield_Model.sav', 'rb'))
 
-st.write(os.listdir())
-st.write(os.listdir("model"))
 
 def crop_yeild_prediction(test_data):
     
