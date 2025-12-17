@@ -79,15 +79,16 @@ def main():
     Region = st.number_input("Region", min_value=0, max_value=3)
     Soil_Type = st.number_input("Soil Type", min_value=0, max_value=5)
     Crop = st.number_input("Crop", min_value=0, max_value=5)
-    Weather_Condition = st.number_input("Weather Condition", min_value=0, max_value=2)
-
     Rainfall_mm = st.number_input("Rainfall (mm)", min_value=0.0)
     Temperature_Celsius = st.number_input("Temperature (°C)")
     Fertilizer_Used = st.number_input("Fertilizer Used (0 = No, 1 = Yes)", min_value=0, max_value=1)
     Irrigation_Used = st.number_input("Irrigation Used (0 = No, 1 = Yes)", min_value=0, max_value=1)
     Days_to_Harvest = st.number_input("Days to Harvest", min_value=1)
-
-    if st.button("🌾 CROP YIELD TEST RESULT"):
+    Weather_Condition = st.number_input("Weather Condition", min_value=0, max_value=2)
+    Weather_Condition = st.number_input("Weather Condition", min_value=0, max_value=2)
+   
+    
+   if st.button("🌾 CROP YIELD TEST RESULT"):
         input_data = [
             Region,
             Soil_Type,
