@@ -89,14 +89,14 @@ def main():
 
     if st.button("🌾 CROP YIELD TEST RESULT"):
         input_data = [
-            region_map[Region],
-            soil_map[Soil_Type],
-            crop_map[Crop],
+            Region,
+            Soil_Type,
+            Crop,
             Rainfall_mm,
             Temperature_Celsius,
             Fertilizer_Used,
             Irrigation_Used,
-            weather_map[Weather_Condition],
+            Weather_Condition,
             Days_to_Harvest
         ]
 
